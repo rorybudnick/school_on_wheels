@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20151003051655) do
     t.string   "email_address"
     t.string   "password"
     t.string   "phone_number"
-    t.string   "adress"
+    t.string   "address"
     t.boolean  "interviewed",   default: false
     t.text     "grades",        default: [],                 array: true
     t.text     "notes"
