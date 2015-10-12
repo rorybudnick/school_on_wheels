@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: available_time_slots
+#
+#  id         :integer          not null, primary key
+#  start_time :datetime         not null
+#  end_time   :datetime         not null
+#
+
 class AvailableTimeSlot < ActiveRecord::Base
   belongs_to :tutor
   belongs_to :student
