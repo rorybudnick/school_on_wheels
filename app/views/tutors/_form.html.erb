@@ -1,0 +1,63 @@
+<body>
+  <%= form_for @tutor do |f| %>
+  
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <br/>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <br/>
+
+  <%= f.label :email_address %>
+  <%= f.email_field :email_address %>
+  <br/>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br/>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <br/>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <br/>
+  
+  <%= f.label :interviewed, "Interviewed?" %>
+  <%= f.check_box :interviewed %>
+  <br />
+
+  <%= f.label :grades %>
+  <%= f.text_field :grades %>
+  <br/>
+
+  <%= f.label :notes %>
+  <%= f.text_field :notes %>
+  <br/>
+
+  <%= f.label :matched, "Matched?" %>
+  <%= f.check_box :matched %>
+  <br />
+
+  <%= f.label :dv, "DV?" %>
+  <%= f.check_box :dv %>
+  <br />
+
+  <%= f.label "Date Approved" %>
+  <%= f.text_field :date_approved, :class => "datepicker" %>
+  <br/>
+  <script>
+  $(function() {
+    $('.datepicker').datepicker();
+  });
+  </script>
+
+  <%= f.label :admin, "Admin?" %>
+  <%= f.check_box :admin %>
+  <br />
+
+  <%= f.submit @tutor.id.nil? ? "Join" : "Save Changes" %>
+  <% end %>
+</body>

@@ -1,0 +1,12 @@
+<header id="nav-header">
+  <ul id="nav-bar">
+    <li><%= link_to("My Account", "#{tutor_path(session[:tutor_id])}", class:"my-account") if !session[:tutor_id].nil?%></li>
+    <li><%= link_to "Search For Students", hospita_path, class:"search-hospitals" if !session[:tutor_id].nil?%></li>
+    <li><%= link_to "Create Account", new_tutor_path, class:"nav-right" if session[:tutor_id].nil? %></li>
+    <li><%= link_to("Log In","/login", class:"nav-right") if session[:tutor_id].nil? %></li>
+    <li><%= link_to("Log Out #{Tutor.find_by(id: session[:tutor_id]).first_name}", "/session", method: "delete", class:"nav-right") unless session[:tutor_id].nil? %></li>
+  </ul>
+</header>
+
+<div id="break-header">
+</div>

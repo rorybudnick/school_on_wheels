@@ -1,0 +1,15 @@
+<body class="user-show">
+  <%= render 'layouts/header' %>
+  <div id="user-page">
+  <div id="welcome-opener">
+  <h2>Welcome <%= @tutor.first_name %></h2>
+  </div>
+  <div id="user-options">
+    <p><a href=<%=hospitals_path%>><img src="/assets/smallH.png" id="small-h" class="image-link"></a><%= link_to "Search Students", hospitals_path, class: "no-image-link" %></p>
+    
+    <p><a href=<%=user_favorites_path(@user)%>><img src="/assets/favorites.png" id="fav-image" class="image-link"></a><%= link_to "View Appointments", user_favorites_path(@user), class: "no-image-link" %></p>
+
+    <p><a href=<%=edit_user_path(@user) %>><img src="/assets/myinfo.png" id="myinfo-image" class="image-link"></a><%= link_to "Edit My Info", edit_user_path(@user), class: "no-image-link" %></p>
+
+  </div>
+</body>

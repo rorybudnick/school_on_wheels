@@ -2,9 +2,10 @@
 #
 # Table name: available_time_slots
 #
-#  id         :integer          not null, primary key
-#  start_time :datetime         not null
-#  end_time   :datetime         not null
+#  id          :integer          not null, primary key
+#  start_time  :datetime         not null
+#  end_time    :datetime         not null
+#  day_of_week :string
 #
 
 class AvailableTimeSlot < ActiveRecord::Base

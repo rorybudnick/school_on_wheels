@@ -11,19 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003051655) do
+ActiveRecord::Schema.define(version: 20151130014850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "appointments", force: :cascade do |t|
-    t.datetime "start_time", null: false
-    t.datetime "end_time",   null: false
+    t.datetime "start_time",  null: false
+    t.datetime "end_time",    null: false
+    t.string   "day_of_week"
   end
 
   create_table "available_time_slots", force: :cascade do |t|
-    t.datetime "start_time", null: false
-    t.datetime "end_time",   null: false
+    t.datetime "start_time",  null: false
+    t.datetime "end_time",    null: false
+    t.string   "day_of_week"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -51,7 +53,6 @@ ActiveRecord::Schema.define(version: 20151003051655) do
     t.string   "email_address"
     t.string   "password"
     t.string   "phone_number"
-    t.string   "address"
     t.boolean  "interviewed",   default: false
     t.text     "grades",        default: [],                 array: true
     t.text     "notes"
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 20151003051655) do
     t.boolean  "dv",            default: false
     t.datetime "date_approved"
     t.boolean  "admin",         default: false
+    t.text     "address"
   end
 
 end
