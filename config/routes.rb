@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  resources :tutors
+  resources :tutors do
+    resources :appointments
+  end
+
+  resources :students do
+    collection do
+      get "search"
+    end
+  end
   root 'welcome#index'
   get "/login", to: "session#new"
   post "/session", to: "session#create"
