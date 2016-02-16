@@ -48,18 +48,18 @@ ActiveRecord::Schema.define(version: 20151130014850) do
   end
 
   create_table "tutors", force: :cascade do |t|
-    t.string   "first_name",                    null: false
+    t.string   "first_name",                      null: false
     t.string   "last_name"
-    t.string   "email_address"
-    t.string   "password"
+    t.string   "email"
+    t.string   "password_digest"
     t.string   "phone_number"
-    t.boolean  "interviewed",   default: false
-    t.text     "grades",        default: [],                 array: true
+    t.boolean  "interviewed",     default: false
+    t.text     "grades",          default: [],                 array: true
     t.text     "notes"
-    t.boolean  "matched",       default: false
-    t.boolean  "dv",            default: false
+    t.boolean  "matched",         default: false
+    t.boolean  "dv",              default: false
     t.datetime "date_approved"
-    t.boolean  "admin",         default: false
+    t.boolean  "admin",           default: false
     t.text     "address"
   end
 
