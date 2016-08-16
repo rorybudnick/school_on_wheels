@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20151130014850) do
   create_table "tutors", force: :cascade do |t|
     t.string   "first_name",                      null: false
     t.string   "last_name"
-    t.string   "email"
+    t.string   "email_address"
     t.string   "password_digest"
     t.string   "phone_number"
     t.boolean  "interviewed",     default: false

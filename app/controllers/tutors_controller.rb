@@ -51,7 +51,7 @@ class TutorsController < ApplicationController
     params.require(:tutor).permit(
       :first_name,
       :last_name,
-      :email,
+      :email_address,
       :password,
       :password_confirmation,
       :phone_number,

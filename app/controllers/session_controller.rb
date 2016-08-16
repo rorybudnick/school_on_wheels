@@ -5,8 +5,8 @@ class SessionController < ApplicationController
 
   def create
     # find if any user has that email
-    tutor = Tutor.find_by(email: params[:email])
-    
+    tutor = Tutor.find_by(email_address: params[:email_address])
+
     # if that user exists and it has a password that was sent
     if tutor && (tutor.authenticate(params[:password]))
 

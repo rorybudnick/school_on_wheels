@@ -25,6 +25,6 @@ class Tutor < ActiveRecord::Base
 
 
   validates :first_name, presence: true
-  validates :email, uniqueness: true
+  validates :email_address, uniqueness: true
   self.has_secure_password()
 end

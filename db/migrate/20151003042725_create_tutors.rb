@@ -3,7 +3,7 @@ class CreateTutors < ActiveRecord::Migration
     create_table :tutors do |t|
       t.string :first_name, null: false
       t.string :last_name
-      t.string :email
+      t.string :email_address
       t.string :password_digest
       t.string :phone_number
       t.string :address

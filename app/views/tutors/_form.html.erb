@@ -1,6 +1,6 @@
 <body>
   <%= form_for @tutor do |f| %>
-  
+
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
   <br/>
@@ -9,8 +9,8 @@
   <%= f.text_field :last_name %>
   <br/>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+  <%= f.label :email_address %>
+  <%= f.email_field :email_address %>
   <br/>
 
   <%= f.label :password %>
@@ -24,7 +24,7 @@
   <%= f.label :address %>
   <%= f.text_field :address %>
   <br/>
-  
+
   <%= f.label :interviewed, "Interviewed?" %>
   <%= f.check_box :interviewed %>
   <br />
